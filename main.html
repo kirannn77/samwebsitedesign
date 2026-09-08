@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohandas College of Engineering and Technology</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f3f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background:
+                linear-gradient(135deg, #031b3d, #0757a5, #0089c9);
+
+            color: white;
+            text-align: center;
+
+            padding: 25px 20px 0;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+            position: relative;
+        }
+
+        /* Logo */
+
+        .logo {
+            width: 95%;
+            max-width: 1500px;
+            height: 260px;
+
+            object-fit: contain;
+
+            display: block;
+            margin: auto;
+
+            filter: drop-shadow(0 5px 8px rgba(0,0,0,0.25));
+        }
+
+
+        /* College Name */
+
+        header h1 {
+            font-size: clamp(28px, 5vw, 48px);
+
+            margin: 10px 0 20px;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            background: rgba(0, 0, 0, 0.20);
+
+            backdrop-filter: blur(10px);
+
+            padding: 15px 10px;
+
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: 600;
+
+            font-size: 16px;
+
+            padding: 11px 18px;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255,255,255,0.35);
+
+            background: rgba(255,255,255,0.10);
+
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: white;
+
+            color: #0757a5;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.25);
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .container {
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 45px auto;
+        }
+
+        .hero {
+            background: white;
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.08);
+
+            border-top: 5px solid #0784c8;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 200px;
+            height: 200px;
+
+            background: #e5f5ff;
+
+            border-radius: 50%;
+
+            top: -100px;
+            left: -100px;
+        }
+
+        .hero h2 {
+            color: #063b70;
+
+            font-size: clamp(23px, 4vw, 32px);
+
+            margin-bottom: 20px;
+
+            position: relative;
+        }
+
+        .hero h2 span {
+            color: #f28c28;
+        }
+
+        .hero p {
+            max-width: 950px;
+
+            margin: auto;
+
+            color: #555;
+
+            font-size: 18px;
+
+            position: relative;
+        }
+
+
+        /* =========================
+           COLLEGE IMAGE
+        ========================== */
+
+        .image-section {
+            margin-top: 35px;
+
+            text-align: center;
+        }
+
+        .college-image {
+            width: 100%;
+
+            max-width: 950px;
+
+            height: auto;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.18);
+
+            transition: 0.4s ease;
+        }
+
+        .college-image:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* =========================
+           MCA SECTION
+        ========================== */
+
+        .section-title {
+            text-align: center;
+
+            color: #063b70;
+
+            font-size: 32px;
+
+            margin: 55px 0 30px;
+        }
+
+        .section-title::after {
+            content: "";
+
+            display: block;
+
+            width: 80px;
+            height: 4px;
+
+            background: #f28c28;
+
+            margin: 12px auto;
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           FEATURE CARDS
+        ========================== */
+
+        .features {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: white;
+
+            padding: 30px 25px;
+
+            border-radius: 16px;
+
+            text-align: center;
+
+            box-shadow:
+                0 7px 20px rgba(0,0,0,0.08);
+
+            border-bottom: 4px solid #0784c8;
+
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 30px rgba(0,0,0,0.15);
+
+            border-bottom-color: #f28c28;
+        }
+
+        .feature-icon {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            color: #063b70;
+
+            margin-bottom: 10px;
+
+            font-size: 21px;
+        }
+
+        .feature-card p {
+            color: #666;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            margin-top: 60px;
+
+            background:
+                linear-gradient(135deg, #031b3d, #0757a5);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px 15px;
+
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .features {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .logo {
+                height: 220px;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding-top: 15px;
+            }
+
+            .logo {
+                width: 100%;
+                height: auto;
+                max-height: 180px;
+            }
+
+            header h1 {
+                font-size: 26px;
+
+                margin: 10px 0 15px;
+            }
+
+            nav {
+                padding: 12px 8px;
+            }
+
+            nav ul {
+                gap: 7px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+
+                padding: 9px 12px;
+            }
+
+            .container {
+                width: 92%;
+
+                margin: 25px auto;
+            }
+
+            .hero {
+                padding: 25px 18px;
+            }
+
+            .hero p {
+                font-size: 15px;
+
+                text-align: justify;
+            }
+
+            .section-title {
+                font-size: 26px;
+
+                margin-top: 40px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .feature-card {
+                padding: 25px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <img
+            class="logo"
+            src="h1.png"
+            alt="Mohandas College of Engineering and Technology"
+        >
+
+        
+
+        <!-- Navigation directly after heading -->
+
+        <nav>
+
+            <ul>
+
+                
+
+                <li>
+                    <a href="abt.html">About Department</a>
+                </li>
+
+                <li>
+                    <a href="hod.html">HOD Profile</a>
+                </li>
+
+                <li>
+                    <a href="fac.html">Faculty</a>
+                </li>
+
+                <li>
+                    <a href="asso.html">Association</a>
+                </li>
+
+                <li>
+                    <a href="gal.html">Gallery</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- Welcome -->
+
+        <section class="hero">
+
+           
+
+            <p>
+                Educational institution in Nedumangad, Kerala, offering
+                B.Tech, M.Tech, MCA, MBA, and Hotel Management programs.
+                Established in 2002, the college holds AICTE approval,
+                is affiliated with APJ Abdul Kalam Technological University,
+                and has NAAC-A Grade accreditation.
+            </p>
+
+        </section>
+
+
+        <!-- College Image -->
+
+        <section class="image-section">
+
+            <img
+                class="college-image"
+                src="https://mcet.ac.in/wp-content/uploads/elementor/thumbs/home-about-qnk0vfqkqmjd05rlf3gbmdpn622vdpxn8rzqt4k2iy.jpg"
+                alt="Mohandas College of Engineering and Technology"
+            >
+
+        </section>
+
+
+        <!-- MCA Section -->
+
+        <h2 class="section-title">
+           
+        </h2>
+
+
+        <!-- Feature Cards -->
+
+        <section class="features">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Quality Education
+                </h3>
+
+                <p>
+                    Building strong technical knowledge and
+                    professional skills through quality education.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Technical Skills
+                </h3>
+
+                <p>
+                    Developing programming, software development,
+                    networking and modern computing skills.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Career Development
+                </h3>
+
+                <p>
+                    Preparing students for successful careers in
+                    the rapidly growing IT industry.
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Mohandas College of Engineering and Technology
+        </p>
+
+        <p>
+            MCA Department
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

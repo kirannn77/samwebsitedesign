@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty Details</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fb;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #062b59, #0b5cad);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: clamp(30px, 5vw, 45px);
+            letter-spacing: 1px;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: 40px auto;
+        }
+
+        /* Faculty Card */
+        .faculty-card {
+            display: flex;
+            gap: 35px;
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            border-left: 6px solid #0b5cad;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+            transition: 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+        }
+
+        /* Faculty Image */
+        .faculty-image {
+            flex: 0 0 350px;
+            text-align: center;
+        }
+
+        .faculty-image img {
+            width: 100%;
+            max-width: 350px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 5px solid #0b5cad;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Faculty Information */
+        .faculty-info {
+            flex: 1;
+        }
+
+        .faculty-info h2 {
+            color: #062b59;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .designation {
+            color: #f28c28;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Details List */
+        .details {
+            list-style: none;
+            padding: 15px;
+            background: #f4f7fb;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .details li {
+            padding: 6px 0;
+            font-size: 16px;
+        }
+
+        .details li strong {
+            color: #062b59;
+        }
+
+        /* Section Headings */
+        .faculty-info h3 {
+            color: #0b5cad;
+            font-size: 21px;
+            border-bottom: 2px solid #f28c28;
+            padding-bottom: 5px;
+            margin: 20px 0 10px;
+            display: inline-block;
+        }
+
+        /* Lists */
+        .faculty-info ul:not(.details) {
+            padding-left: 25px;
+        }
+
+        .faculty-info ul:not(.details) li {
+            margin-bottom: 5px;
+        }
+
+        .faculty-info p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            background: #062b59;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 800px) {
+
+            .faculty-card {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .faculty-image {
+                flex: none;
+            }
+
+            .faculty-image img {
+                width: 280px;
+                max-width: 100%;
+                height: 380px;
+            }
+
+            .faculty-info h2 {
+                font-size: 25px;
+                text-align: center;
+            }
+
+            .designation {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 92%;
+                margin: 25px auto;
+            }
+
+            .faculty-card {
+                padding: 15px;
+            }
+
+            .faculty-image img {
+                width: 230px;
+                height: 310px;
+            }
+
+            .faculty-info h2 {
+                font-size: 22px;
+            }
+
+            .faculty-info h3 {
+                font-size: 19px;
+            }
+
+            .details li,
+            .faculty-info p,
+            .faculty-info ul:not(.details) li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Faculty Details</h1>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Faculty 1 -->
+        <section class="faculty-card">
+
+            <div class="faculty-image">
+                <img
+                    src="https://lh3.googleusercontent.com/sitesv/AG8ngQWNhfdm-J4f-rc6yTr3mKRBrChozp8UhQPfO-B5AfTQo_KksfBcUQ1bOvrQoeoVSfMgcQMliIrKZBwZck65PXRvKDc1hvUQWWWMMzmpkYqYPywnm63lLQ28xspS5coufo6inTlDsYEZDjd5A_VHBicVvY88ncvgk9bVR5Gcx_6dETh2ILBKj3H8zMDwZ3ll-NTAP9upzfQm7NJmVShu-iEJzceAoLfUFLJFQw=w1280"
+                    alt="R. Sujitha">
+            </div>
+
+            <div class="faculty-info">
+
+                <h2>R. Sujitha</h2>
+
+                <p class="designation">
+                    Assistant Professor
+                </p>
+
+                <ul class="details">
+                    <li><strong>Department:</strong> Department of MCA</li>
+                    <li><strong>Phone:</strong> 9400883648</li>
+                    <li><strong>Email:</strong> sujithaprasanth1200@gmail.com / sujithaprasanth@gmail.com</li>
+                    <li><strong>KTU ID:</strong> KTU-F52030</li>
+                </ul>
+
+                <h3>Academic Qualification</h3>
+
+                <ul>
+                    <li>June 2024: Pursuing PhD in Computer Science from Glocal University, UP.</li>
+                    <li>MCA – SSM College of Engineering, Komarapalyam, affiliated to Anna University, Chennai.</li>
+                    <li>B.Sc. Physics, Mathematics and Computer Science – Nehru Memorial College, Sullia, affiliated to Mangalore University.</li>
+                </ul>
+
+                <h3>Areas of Interest</h3>
+
+                <ul>
+                    <li>Computer Networks</li>
+                    <li>Data Structures</li>
+                    <li>Database Management Systems (DBMS)</li>
+                    <li>Image Processing</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Web Programming</li>
+                    <li>OOPS Concepts</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Faculty 2 -->
+        <section class="faculty-card">
+
+            <div class="faculty-image">
+                <img
+                    src="https://lh3.googleusercontent.com/sitesv/AG8ngQXDpLW8jpsxsucAGNfzefL2M57QM10bwuez-tOB5IJ0O-pnoe1Lj4q7KA6pd3OTBYad7VaRrFFJ8x3syeQfVVpfEEyE0nTp0uiLSqxf83S8diIvEo17BAXvADRkYzhyqmgosV53qbO7myI2UoMWyjWrEHBpPOPcu7qer9nd2r1975JO-wEpoht-0dg16ewmt_LpNyOyd0RvkyLXnvJ-HI0qrV7aPcThSc7II37a4YY=w1280"
+                    alt="Jeeja G.S.">
+            </div>
+
+            <div class="faculty-info">
+
+                <h2>Jeeja G.S.</h2>
+
+                <p class="designation">
+                    Associate Professor (NC)
+                </p>
+
+                <ul class="details">
+                    <li><strong>Department:</strong> Department of MCA</li>
+                    <li><strong>Phone:</strong> 9947363368</li>
+                    <li><strong>Email:</strong> gsjeeja75@gmail.com</li>
+                    <li><strong>KTU ID:</strong> KTU-F14935</li>
+                </ul>
+
+                <h3>Academic Qualification</h3>
+
+                <ul>
+                    <li>MCA from MES College of Engineering, Kuttippuram.</li>
+                    <li>B.Sc. Electronics from University of Kerala.</li>
+                    <li>Diploma in Instrument Technology from Women's Polytechnic, Trivandrum.</li>
+                </ul>
+
+                <h3>Areas of Interest</h3>
+
+                <p>
+                    Database Management Systems, Software Engineering
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Mohandas College of Engineering and Technology |
+            MCA Department
+        </p>
+    </footer>
+
+</body>
+
+</html>
